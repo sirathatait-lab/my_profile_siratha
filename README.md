@@ -1,1 +1,138 @@
-# my_profile_siratha
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แฟ้มสะสมผลงานและคลังเอกสาร - Cloud Portfolio</title>
+    <!-- โหลด Tailwind CSS ผ่าน CDN เพื่อความสวยงามและใช้งานง่าย -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="bg-indigo-700 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold">📌นางสาวสิรฐา ต่ายเทศ📌</h1>
+                <p class="text-indigo-200 text-sm">📌Digital Business Technology & Cloud Educator📌</p>
+            </div>
+            <span class="bg-indigo-800 text-indigo-100 text-xs px-3 py-1 rounded-full border border-indigo-500">
+                Hosted on GitHub Pages
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow space-y-8">
+
+        <!-- Section 1: Profile & Intro -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-6">
+            <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+            <img id="profile-img" 
+                 src="./assets/images/ChatGPT Image Aug 7, 2026, 12_15_40 PM.png" 
+                 alt="รูปโปรไฟล์" 
+                 onerror="this.src='https://via.placeholder.com/150?text=Upload+Image';"
+                 class="w-32 h-32 rounded-full object-cover border-4 border-indigo-100 shadow">
+            
+            <div class="space-y-2 text-center md:text-left">
+                <h2 class="text-xl font-bold text-gray-900">📌เกี่ยวกับฉัน & โครงสร้างระบบ📌</h2>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    📌เว็บไซต์นี้สร้างขึ้นเพื่อทดสอบการวางสถาปัตยกรรมคลาวด์เบื้องต้น โดยทำการ Deploy โค้ดผ่านระบบ **GitHub Actions (CI/CD)** 
+                    และเชื่อมต่อพื้นที่จัดเก็บข้อมูลไฟล์สาธารณะด้วย **GitHub Static Storage**📌
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Cloud Resource & Document Download -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-4">
+            <h2 class="text-lg font-bold text-gray-900 border-b pb-2 flex items-center gap-2">
+                📌📂 คลังเอกสารดาวน์โหลด (GitHub Asset Hub)📌
+            </h2>
+            <p class="text-sm text-gray-500">
+                📌เอกสารทั้งหมดถูกจัดเก็บและเรียกใช้งานโดยตรงจากโฟลเดอร์ใน GitHub Repository📌
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                <!-- Document Card 1: Resume -->
+                <div class="p-4 border rounded-lg bg-gray-50 flex justify-between items-center">
+                    <div>
+                        <h3 class="font-medium text-gray-800">📌เอกสารประวัติส่วนตัว (Resume)📌</h3>
+                        <p class="text-xs text-gray-500">📌ไฟล์รูปแบบ PDF (GitHub Storage)📌</p>
+                    </div>
+                    <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/resume.pdf -->
+                    <a href="./assets/docs/Poster A4 (1).pdf">
+                        เปิดดูไฟล์
+                    </a>
+                </div>
+
+                <!-- Document Card 2: Topology Diagram -->
+                <div class="p-4 border rounded-lg bg-gray-50 flex justify-between items-center">
+                    <div>
+                        <h3 class="font-medium text-gray-800">📌แผนผังระบบ (Topology Diagram)📌</h3>
+                        <p class="text-xs text-gray-500">📌ไฟล์รูปแบบ PDF/PNG📌</p>
+                    </div>
+                    <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/topology.pdf -->
+                     <a href="./assets/docs/Poster A4 (1).pdf">
+                        เปิดดูไฟล์
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Contact Form / Client-side Action -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-4">
+            <h2 class="text-lg font-bold text-gray-900 border-b pb-2">
+                 💬 ฝากข้อความติดต่อ (Client-Side Interactive Form)
+            </h2>
+            
+            <form id="contact-form" class="space-y-4 max-w-lg">
+                <div>
+                    <label class="block text-xs font-medium text-gray-700 mb-1">ชื่อผู้ติดต่อ</label>
+                    <input type="text" id="sender-name" required placeholder="กรอกชื่อของคุณ" 
+                           class="w-full px-3 py-2 border rounded-md text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-700 mb-1">ข้อความ</label>
+                    <textarea id="sender-message" rows="3" required placeholder="ข้อความที่ต้องการฝากไว้..." 
+                              class="w-full px-3 py-2 border rounded-md text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                </div>
+                <button type="button" onclick="submitMessage()" 
+                        class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-md font-medium transition shadow-sm">
+                    ส่งข้อความทดสอบ
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200 mt-auto">
+        <div class="max-w-5xl mx-auto px-4 py-4 text-center text-xs text-gray-500">
+            📌© 2026 Cloud & DevOps Basic Course. Built for Educational Purpose on GitHub.📌
+        </div>
+    </footer>
+
+    <!-- JavaScript สำหรับทดสอบระบบ -->
+    <script>
+        function submitMessage() {
+            const name = document.getElementById('sender-name').value;
+            const message = document.getElementById('sender-message').value;
+
+            if(!name || !message) {
+                alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+                return;
+            }
+
+            console.log("Form Submitted:", { name, message });
+            alert(`ขอบคุณครับคุณ ${name}! ระบบรับข้อความเรียบร้อยแล้ว`);
+            
+            document.getElementById('sender-name').value = '';
+            document.getElementById('sender-message').value = '';
+        }
+    </script>
+</body>
+</html>
